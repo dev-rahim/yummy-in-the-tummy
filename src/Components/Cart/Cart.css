@@ -1,0 +1,14 @@
+.Cart h3 {
+    background-color: rgb(243, 243, 243);
+}
+
+.Cart ol {
+    text-align: justify;
+}
+
+.Cart ol li {
+    /* border-color: brown; */
+    /* border: 1px solid brown; */
+    line-height: 2em;
+
+}

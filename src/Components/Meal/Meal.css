@@ -1,0 +1,51 @@
+.meal {
+    width: 40%;
+    /* border-radius: 2rem; */
+    /* border: 5px solid tomato; */
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px 15px -4px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: 5px 5px 15px -4px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 5px 5px 15px -4px rgba(0, 0, 0, 0.42);
+}
+
+.meal img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+button {
+    border-radius: 3px;
+    padding: 0.3rem 1rem;
+    border: 2px solid #070707;
+    background-color: white;
+    margin: 0 auto;
+    height: 36px;
+
+}
+
+.icon {
+    font-size: 0px;
+    line-height: 0px;
+    color: yellowgreen;
+}
+
+.btn-text {
+    text-align: center;
+    margin-top: 1.5px;
+    margin-left: 5px;
+}
+
+.btn-content {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+button:hover {
+    color: #070707;
+    border-color: yellowgreen;
+}

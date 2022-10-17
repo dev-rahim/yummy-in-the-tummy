@@ -1,0 +1,13 @@
+.Shop {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-row-gap: 5px;
+    grid-column-gap: 25px;
+}
+
+.meals {
+    background: rgb(243, 243, 243);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
