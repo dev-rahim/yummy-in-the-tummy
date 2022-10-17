@@ -1,6 +1,6 @@
 import './Cart.css'
 const cart = (props) => {
-    console.log(props.mealTitle);
+    // console.log(props.mealTitle);
 
     return (
         <div className='Cart'>

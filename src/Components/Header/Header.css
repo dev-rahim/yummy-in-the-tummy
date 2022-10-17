@@ -23,16 +23,3 @@
 
 }
 
-.search_ber {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    background-color: rgba(28, 13, 13, 0.818);
-}
-
-.search_ber input {
-    padding: .3em;
-    width: 50%;
-
-}

@@ -12,9 +12,7 @@ const Header = () => {
                 <a className='button' href="./Catagories">Catagories</a>
                 <a className='button' href="./Privacy">Privacy Policy</a>
             </div>
-            <div className="search_ber">
-                <input type="text" placeholder='search here' />
-            </div>
+            
         </>
     );
 };

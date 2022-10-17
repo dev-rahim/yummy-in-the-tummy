@@ -8,7 +8,12 @@ const Shop = () => {
     useEffect(() => {
         fetch('./meals.json')
             .then(res => res.json())
-            .then(data => setMeals(data))
+            .then(data => {
+
+                setMeals(data)
+                setSearchMeals(data)
+            }
+            )
         // fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
         //     .then(res => res.json())
         //     .then(data => setMeals(data.meals))
@@ -24,24 +29,36 @@ const Shop = () => {
         setMealTitle([...mealTitle, idMeal])
 
         // console.log(mealTitle);
+    }
 
+    const [searchMeals, setSearchMeals] = useState([])
+
+    const searchHandler = (event) => {
+        const searchText = event.target.value;
+        const FilteredMeal = meals.filter(meal => meal.strMeal.toLowerCase().includes(searchText))
+        setSearchMeals(FilteredMeal);
     }
 
     return (
-        <div className='Shop'>
-            <div className="meals">
-                {
-                    meals.map(meal => <Meal
-                        key={meal.idMeal}
-                        clickEvent={handleAddTOFavorite}
-                        meal={meal}
-                    />)
-                }
+        <>
+            <div className="search_ber">
+                <input onChange={searchHandler} type="text" placeholder='search here' />
             </div>
-            <div>
-                <Cart mealTitle={mealTitle} />
+            <div className='Shop'>
+                <div className="meals">
+                    {
+                        searchMeals.map(meal => <Meal
+                            key={meal.idMeal}
+                            clickEvent={handleAddTOFavorite}
+                            meal={meal}
+                        />)
+                    }
+                </div>
+                <div>
+                    <Cart mealTitle={mealTitle} />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
